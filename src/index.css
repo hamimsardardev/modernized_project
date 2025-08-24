@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", "sans-serif";
+}
+
+@layer components {
+  .container {
+    @apply mx-auto !max-w-[1440px] px-2.5 xl:px-0;
+  }
+
+  .list {
+    @apply text-[#27265B] relative font-medium text-[18px] hover:text-red-600 after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:bg-[#FFB000] after:w-0 hover:after:w-full after:h-1 after:transition-all;
+  }
+
+  .offer{
+    @apply font-semibold relative text-[48px] text-[#012645] leading-[168%] mb-[76px] after:content-[''] after:absolute after:bottom-[-5px] after:left-[50%] after:bg-[#FFB000] after:w-0 hover:after:w-[58px] after:h-[5px] after:transform after:translate-x-[-50%] after:translate-y-[-50%]
+  }
+
+.deptbutton{
+  @apply font-medium text-[18px] text-[#000000] leading-[168%] py-[15px] px-[30px] hover:bg-[#FFB000] hover:text-white rounded-[4px]
+}
+
+ .weblist {
+    @apply relative py-[18px] px-[24px] bg-white text-[#012645] font-semibold text-[18px] hover:bg-[#FFB000] hover:text-white transition-all duration-300 after:content-[''] after:absolute after:bottom-[-29px] after:left-0 after:bg-[#FFB000] after:w-0 after:h-1 hover:after:w-full
+  }
+
+ }
+
+ .slick-prev:before,
+.slick-next:before {
+  color: #FFB000 !important;
+  font-size: 30px !important ;       
+}
+.slick-prev {
+    left: -35px !important;
+}
+.slick-next {
+    right: -35px !important;
+}
+
