@@ -39,3 +39,16 @@
     right: -35px !important;
 }
 
+.slick-slide {
+  padding: 0 15px !important;
+}
+.slick-center{
+  transform: scale(1.1) !important; /* মাঝের স্লাইড বড় করে */
+  opacity: 1;
+}
+.slick-slide:not(.slick-center) {
+  opacity: 0.7 !important;
+}
+.active {
+  color: red;
+}

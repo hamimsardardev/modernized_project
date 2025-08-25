@@ -1,6 +1,8 @@
 import React from "react";
 import HeaderLogo from "../assets/images/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+let { pathname} = useLocation();
+
 const Header = () => {
   return (
     <>
@@ -13,22 +15,22 @@ const Header = () => {
               </div>
               <div>
                 <ul className="flex gap-[44px]">
-                  <li className="list">
+                  <li className={pathname === "/" ? "list active " : "list"}>
                     <Link to="/">Home </Link>
                   </li>
-                  <li className="list">
+                  <li className={pathname === "/ContactPart" ? "list active " : "list"}>
                     <Link to="/ContactPart">Contact Us</Link>
                   </li>
-                  <li className="list">
+                  <li className={pathname === "/SuccessPart" ? "list active " : "list"}>
                     <Link to="/SuccessPart">Team Success</Link>
                   </li>
-                  <li className="list">
+                  <li className={pathname === "/Webdevelop" ? "list active " : "list"}>
                     <Link to="/Webdevelop">Web Development </Link>
                   </li>
-                  <li className="list">
+                  <li className={pathname === "/SocialMedia" ? "list active " : "list"}>
                     <Link to="/SocialMedia">Social Media </Link>
                   </li>
-                  <li className="list">
+                  <li className={pathname === "/Govermentpart" ? "list active " : "list"}>
                     <Link to="/Govermentpart">Government Contracting</Link>
                   </li>
                 </ul>
