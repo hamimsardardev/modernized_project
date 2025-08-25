@@ -1,5 +1,5 @@
 import React from "react";
-import marketingimage from "../../assets/images/socialmedia.png";
+import marketingimage from "../../assets/images/marketingimage.png";
 
 const SocialMarketing = () => {
   return (

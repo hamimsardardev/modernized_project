@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const Banner = () => {
+    const navigate = useNavigate(); 
   return (
     <>
       <section className='bg-[url("/public/image/bannerimage.png")] bg-cover bg-center'>
@@ -16,7 +19,8 @@ const Banner = () => {
               <p className="text-[#FFFFFF] font-medium text-[30px] leading-[137%]">
                 Digital Marketing & Web Design Simplified
               </p>
-              <button className="bg-[#FFB000] border-2 border-transparent text-white py-[13px] px-[40px] mt-[38px] rounded-[6px] text-[18px] font-medium cursor-pointer hover:border-2 hover:border-[#FFB000] hover:bg-white hover:text-black hover:transition-all ">
+              <button  onClick={() => navigate("/AppDevelop")}
+               className="bg-[#FFB000] border-2 border-transparent text-white py-[13px] px-[40px] mt-[38px] rounded-[6px] text-[18px] font-medium cursor-pointer hover:border-2 hover:border-[#FFB000] hover:bg-white hover:text-black hover:transition-all ">
                 Consultation
               </button>
             </div>

@@ -4,18 +4,10 @@ import offerimage1 from "../../assets/images/offerimage1.png";
 import offerimage2 from "../../assets/images/offerimage2.png";
 import offerimage3 from "../../assets/images/offerimage3.png";
 import { LuBriefcaseBusiness } from "react-icons/lu";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 
 const GovermentSlider = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
+  
 
   const [viewdetails, setViewdetails] = useState(false);
   const handleReadToggle = () => {
@@ -25,7 +17,7 @@ const GovermentSlider = () => {
     <div>
       <section>
         <div className="container">
-          <Slider {...settings}>
+          
             <div>
               <div
                 className="group bg-[#FFB000] border border-gray-300 rounded-[14px] shadow-xl pt-[24px] 
@@ -139,7 +131,6 @@ const GovermentSlider = () => {
                 </a>
               </div>
             </div>
-          </Slider>
         </div>
       </section>
     </div>
