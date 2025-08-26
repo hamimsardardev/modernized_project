@@ -7,12 +7,15 @@ import ChimeApp from '../ChimeApp'
 import Features from '../Features'
 import Help from '../Help'
 import ContactUs from '../ContactUs'
+import ScrollToTop from '../ScrollToTop'
+
 
 
 
 const Home = () => {
   return (
-    <>    
+    <> 
+    <ScrollToTop/>  
     <Banner/>
     <ClintsPart/>
     <Card/>

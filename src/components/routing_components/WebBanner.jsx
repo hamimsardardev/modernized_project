@@ -3,7 +3,7 @@ import webannerimage from "../../assets/images/webbannerimage.png";
 const WebBanner = () => {
   return (
     <div>
-        <section className="mt-[10px] bg-[#F3FFF7]">
+        <section className="bg-[#F3FFF7]">
                 <div className="container">
                   <div className="grid grid-cols-2 items-center gap-6 pt-[114px]">
                     <div>

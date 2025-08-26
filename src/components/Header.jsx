@@ -1,9 +1,10 @@
 import React from "react";
 import HeaderLogo from "../assets/images/logo.png";
 import { Link, useLocation } from "react-router-dom";
-let { pathname} = useLocation();
+
 
 const Header = () => {
+  let { pathname} = useLocation();
   return (
     <>
       <header className="fixed w-full z-[9999]">

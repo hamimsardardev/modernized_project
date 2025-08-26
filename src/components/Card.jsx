@@ -106,7 +106,7 @@ const Card = () => {
             </div>
             <div>
               <div className="group ml-3 bg-[#FFB000] border border-gray-300 rounded-[14px] shadow-xl pt-[38px] pb-[35px] pr-[29px] pl-[25px] hover:bg-[#FFFFFF]">
-                <div className="rounded-full border-[3px] border-[#7F5800] flex items-center justify-center w-28 h-28">
+                <div className="rounded-full border-[3px] border-[#FFB000] flex items-center justify-center w-28 h-28">
                   <img src={offerimage2} alt="offerimage2" />
                 </div>
                 <h2 className="font-bold text-[20px] text-[#000000] leading-[180%] mt-[12px] pb-3 hover:text-[#012645]">
