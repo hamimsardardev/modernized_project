@@ -4,7 +4,7 @@ import clintsimage from "../assets/images/clintsimage.png";
 const ClintsPart = () => {
   return (
     <>
-      <section className="mt-[100px] md:mt-[180px] lg:mt-[240px] mb-[100px] md:mb-[180px] lg:mb-[220px]">
+      <section className="mt-[100px] md:mt-[100px] lg:mt-[100px] mb-[100px] md:mb-[100px] lg:mb-[100px]">
         <div className="container px-4">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-0">
             {/* Image Part */}

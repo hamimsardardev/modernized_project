@@ -7,20 +7,20 @@ const Team = () => {
     <>
       <section>
         <div className="container">
-          <div className="flex mt-[175px]">
-            <div className="w-[60%]">
+          <div className="lg:flex mt-[30px]">
+            <div className="lg:w-[60%]">
               <img src={teamimage} alt="teamimage" />
             </div>
-            <div className="w-[40%] mt-[100px]">
-              <h2 className=" w-[443px] relative font-bold text-[36px] text-[#012645] leading-[136%] mb-[66px] after:content-[''] after:absolute after:left-[-27px] after:top-2 after:bg-[#4F52FF] after:w-[6px] after:h-[77px] ">
+            <div className="lg:w-[40%] lg:mt-[100px] mt-[40px]">
+              <h2 className=" lg:w-[443px] w-full relative font-bold lg:text-[36px] sm:text-[30px] text-[#012645] leading-[136%] lg:mb-[66px] mb-[30px] after:content-[''] after:absolute after:left-[-27px] after:top-2 after:bg-[#4F52FF] after:w-[6px] after:h-[77px] ">
                 The Team to Bring Your Business to the Forefront
               </h2>
-              <span className=" w-[619px] font-regular text-[18px] text-[#113350] ">
+              <span className=" lg:w-[619px] w-full font-regular lg:text-[18px] text-[16px] text-[#113350] ">
                 Modernized Mobile produces mobile apps and software solutions
                 designed for entrepreneurs that are ready to leave their mark on
                 the industry.
               </span>
-              <p className="w-[619px] font-regular text-[18px] text-[#113350] mt-[54px]">
+              <p className="lg:w-[619px] w-full font-regular lg:text-[18px] text-[16px] text-[#113350] lg:mt-[54px] mt-[30px]">
                 As full-stack developers, we bring our expertise to handle any
                 challenge our clients have when it comes to databases, servers,
                 clients, or native applications. We’re an all-encompassing
