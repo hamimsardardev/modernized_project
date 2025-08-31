@@ -10,7 +10,7 @@ const Header = () => {
     <>
       <header className="fixed w-full z-[9999]">
         <nav className="bg-[#FFFFFF]/80 absolute w-full">
-          <div className="container mx-auto px-4">
+          <div className="container">
             <div className="flex justify-between items-center py-4">
               <div>
                 <Link to="/">

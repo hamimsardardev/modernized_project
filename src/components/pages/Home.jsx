@@ -21,9 +21,9 @@ const Home = () => {
     <Card/>
     <Team/>
     <ChimeApp/>
-    <Features/>
-    <Help/>
-    <ContactUs/>
+    {/* <Features/>
+    <Help/> */}
+    {/* <ContactUs/> */}
     </>
   )
 }

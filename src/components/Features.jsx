@@ -13,7 +13,7 @@ const Features = () => {
               features
             </h1>
           </div>
-          <div className="flex gap-[33px] items-center">
+          <div className="lg:flex gap-[33px] items-center">
             <div className="drop-shadow-2xl">
               <div className="text-center border-2 border-[#F0F0F0] rounded-2xl hover:drop-shadow-2xl ">
                 <img

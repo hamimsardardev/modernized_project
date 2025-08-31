@@ -6,21 +6,25 @@ const ChimeApp = () => {
     <>
       <section>
         <div className="container">
-          <div className="flex">
-            <div className="w-[30%] bg-[#FFB000] grid place-items-center">
-              <h2 className="text-[#FFFFFF] font-semibold text-[45px] leading-[168%] px-[48px] py-[74px]">
+          <div className="lg:flex">
+            <div className="lg:w-[30%] w-full bg-[#FFB000] grid place-items-center">
+              <h2 className="text-[#FFFFFF] font-semibold lg:text-[45px] text-[40px] leading-[168%] lg:px-[48px] lg:py-[74px] px-[20px] py-[50px]">
                 MoMo Spotlight: Chime App
               </h2>
             </div>
-            <div className="w-[70%] bg-[#002544] relative">
-              <div className="flex">
-                <p className="w-[603px] text-[#FFFFFF] font-medium text-[18px] leading-[180%] py-[139px] pl-[51px]">
+            <div className="lg:w-[70%] w-full bg-[#002544] lg:relative">
+              <div className=" lg:flex">
+                <p className="lg:w-[603px] w-full text-[#FFFFFF] lg:font-medium fomt-thin lg:text-[18px] text-[16px] leading-[180%] lg:py-[139px] lg:pl-[51px] py-[30px] pl-[30px]">
                   Clearwater Dolphin Trail App has been making waves in the city
                   of Clearwater, Florida. This app has been helping tourists and
                   locals find the dolphin statues that mark historical landmarks
                   in Clearwater.
                 </p>
-                <img className="absolute top-[-135px] right-[-160px]" src={momoiamge} alt="momoiamge" />
+                <img
+                  className="sm:block lg:absolute lg:top-[-135px] lg:right-[-160px] top-[-45px] right-[-107px]"
+                  src={momoiamge}
+                  alt="momoiamge"
+                />
               </div>
             </div>
           </div>
