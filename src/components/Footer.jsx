@@ -10,20 +10,18 @@ const Footer = () => {
   return (
     <>
       <section>
-        <footer className="mt-[102px] mb-[97px]">
+        <footer className="mt-[102px] sm:mt-[80px] md:mt-[80px] ">
           <div className="container">
-            <div className="grid grid-cols-3">
-              <div>
-                <img src={HeaderLogo} alt="HeaderLogo" />
-                <p className="font-medium text-[#000000] text-[16px] leading-[172.5%] mb-[60px] mt-[28px] w-[319px] ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16">
+              <div className="flex flex-col sm:flex-row lg:flex-col items-center sm:items-start">
+                <img src={HeaderLogo} alt="HeaderLogo" className="sm:mx-0 w-[150px] sm:w-[150px]"/>
+                <p className="font-medium text-[#000000] text-center sm:text-left text-sm sm:text-base lg:text-[16px] leading-[172.5%] mb-[40px] sm:mb-[50px] lg:mb-[60px] mt-[20px] sm:mt-[28px] w-full lg:w-[319px] ">
+                  
                   Modernized Mobile is one of the leading web design and digital
                   marketing companies serving clients nationwide.
                 </p>
-                <span className="font-medium text-[#000000] text-[18px] leading-[200%]  ">
-                  © 2022, Modernized Mobile. All Rights Reserved.
-                </span>
               </div>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center lg:items-center">
                 <h4 className="font-semibold text-[#000000] text-[18px] leading-[200%] ml-[-90px] mb-[20px]">
                   Quick Links
                 </h4>
@@ -82,6 +80,11 @@ const Footer = () => {
               </div>
             </div>
           </div>
+            <div className="text-center bg-[#FFB000] py-[30px] mt-[80px]">
+              <p className="lg:font-medium w-full mx-auto text-[#000000] text-[16px] lg:text-[18px] md:text-[16px] leading-[200%]  ">
+                © 2022, Modernized Mobile. All Rights Reserved.
+              </p>
+            </div>
         </footer>
       </section>
     </>

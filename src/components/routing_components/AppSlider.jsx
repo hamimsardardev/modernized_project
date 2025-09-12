@@ -8,44 +8,44 @@ function AppSlider() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1, // সেন্টার মোডে ৩টি স্লাইড ফোকাসে
+    slidesToShow: 1,
     slidesToScroll: 1,
-    centerMode: true, // সেন্টার মোড চালু
-    centerPadding: "30px", // বাম ও ডান প্যাডিং ৩০ পিক্সেল
+    centerMode: true,
+    centerPadding: "15px",
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          centerPadding: "30px",
+          slidesToShow: 1,
+          centerPadding: "20px",
         },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          centerPadding: "30px",
+          centerPadding: "10px",
         },
       },
     ],
   };
   return (
     <div className="container">
-      <div>
+      <div className="my-8 sm:my-12 lg:my-16">
         <Slider {...settings}>
           <div>
-            <div className="bg-[#FFB000] rounded-2xl px-8 py-10 shadow-lg max-w-xl mx-auto">
-              <h4 className="font-bold text-3xl md:text-4xl text-white mb-4">
+            <div className="bg-[#FFB000] rounded-2xl px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 shadow-lg max-w-md sm:max-w-lg lg:max-w-xl mx-auto">
+              <h4 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white mb-3 sm:mb-4 leading-tight">
                 iOS App Development
               </h4>
-              <p className="font-light text-lg text-white mb-4 leading-relaxed">
-                With comprehensive experience that’s been cultivated over the
+              <p className="font-light text-sm sm:text-base lg:text-lg text-white mb-3 sm:mb-4 leading-relaxed">
+                With comprehensive experience that's been cultivated over the
                 past 14 years – beginning when the iPhone was first announced -
                 our mobile app developers are equipped to bring your vision to
-                life whether you’re planning to launch on iPhone, iPad, Apple
+                life whether you're planning to launch on iPhone, iPad, Apple
                 Watch, or any other Apple Device or platform.
               </p>
-              <span className="font-light text-lg text-white block leading-relaxed">
+              <span className="font-light text-sm sm:text-base lg:text-lg text-white block leading-relaxed">
                 We offer full-stack development and believe in high class
                 applications that are scalable, intuitive, and aesthetic.
                 Proficient in Objective-C, Swift, C3, and more, we use our years
@@ -56,18 +56,18 @@ function AppSlider() {
             </div>
           </div>
           <div>
-            <div className="bg-[#FFB000] rounded-2xl px-8 py-10 shadow-lg max-w-xl mx-auto">
-              <h4 className="font-bold text-3xl md:text-4xl text-white mb-4">
+            <div className="bg-[#FFB000] rounded-2xl px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 shadow-lg max-w-md sm:max-w-lg lg:max-w-xl mx-auto">
+              <h4 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white mb-3 sm:mb-4 leading-tight">
                 iOS App Development
               </h4>
-              <p className="font-light text-lg text-white mb-4 leading-relaxed">
-                With comprehensive experience that’s been cultivated over the
+              <p className="font-light text-sm sm:text-base lg:text-lg text-white mb-3 sm:mb-4 leading-relaxed">
+                With comprehensive experience that's been cultivated over the
                 past 14 years – beginning when the iPhone was first announced -
                 our mobile app developers are equipped to bring your vision to
-                life whether you’re planning to launch on iPhone, iPad, Apple
+                life whether you're planning to launch on iPhone, iPad, Apple
                 Watch, or any other Apple Device or platform.
               </p>
-              <span className="font-light text-lg text-white block leading-relaxed">
+              <span className="font-light text-sm sm:text-base lg:text-lg text-white block leading-relaxed">
                 We offer full-stack development and believe in high class
                 applications that are scalable, intuitive, and aesthetic.
                 Proficient in Objective-C, Swift, C3, and more, we use our years
@@ -78,18 +78,18 @@ function AppSlider() {
             </div>
           </div>
           <div>
-            <div className="bg-[#FFB000] rounded-2xl px-8 py-10 shadow-lg max-w-xl mx-auto">
-              <h4 className="font-bold text-3xl md:text-4xl text-white mb-4">
+            <div className="bg-[#FFB000] rounded-2xl px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 shadow-lg max-w-md sm:max-w-lg lg:max-w-xl mx-auto">
+              <h4 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white mb-3 sm:mb-4 leading-tight">
                 iOS App Development
               </h4>
-              <p className="font-light text-lg text-white mb-4 leading-relaxed">
-                With comprehensive experience that’s been cultivated over the
+              <p className="font-light text-sm sm:text-base lg:text-lg text-white mb-3 sm:mb-4 leading-relaxed">
+                With comprehensive experience that's been cultivated over the
                 past 14 years – beginning when the iPhone was first announced -
                 our mobile app developers are equipped to bring your vision to
-                life whether you’re planning to launch on iPhone, iPad, Apple
+                life whether you're planning to launch on iPhone, iPad, Apple
                 Watch, or any other Apple Device or platform.
               </p>
-              <span className="font-light text-lg text-white block leading-relaxed">
+              <span className="font-light text-sm sm:text-base lg:text-lg text-white block leading-relaxed">
                 We offer full-stack development and believe in high class
                 applications that are scalable, intuitive, and aesthetic.
                 Proficient in Objective-C, Swift, C3, and more, we use our years
@@ -100,18 +100,18 @@ function AppSlider() {
             </div>
           </div>
           <div>
-            <div className="bg-[#FFB000] rounded-2xl px-8 py-10 shadow-lg max-w-xl mx-auto">
-              <h4 className="font-bold text-3xl md:text-4xl text-white mb-4">
+            <div className="bg-[#FFB000] rounded-2xl px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 shadow-lg max-w-md sm:max-w-lg lg:max-w-xl mx-auto">
+              <h4 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white mb-3 sm:mb-4 leading-tight">
                 iOS App Development
               </h4>
-              <p className="font-light text-lg text-white mb-4 leading-relaxed">
-                With comprehensive experience that’s been cultivated over the
+              <p className="font-light text-sm sm:text-base lg:text-lg text-white mb-3 sm:mb-4 leading-relaxed">
+                With comprehensive experience that's been cultivated over the
                 past 14 years – beginning when the iPhone was first announced -
                 our mobile app developers are equipped to bring your vision to
-                life whether you’re planning to launch on iPhone, iPad, Apple
+                life whether you're planning to launch on iPhone, iPad, Apple
                 Watch, or any other Apple Device or platform.
               </p>
-              <span className="font-light text-lg text-white block leading-relaxed">
+              <span className="font-light text-sm sm:text-base lg:text-lg text-white block leading-relaxed">
                 We offer full-stack development and believe in high class
                 applications that are scalable, intuitive, and aesthetic.
                 Proficient in Objective-C, Swift, C3, and more, we use our years
@@ -124,8 +124,8 @@ function AppSlider() {
         </Slider>
       </div>
       
-      <div className="flex justify-center items-center py-[120px] mx-auto">
-        <img src={appImage} alt="appImage" />
+      <div className="flex justify-center items-center py-16 sm:py-20 lg:py-[120px] mx-auto">
+        <img src={appImage} alt="appImage" className="max-w-full h-auto w-full sm:w-auto rounded-lg shadow-lg" />
       </div>
     </div>
   );
