@@ -3,14 +3,14 @@ import React from "react";
 const ContactLogin = () => {
   return (
     <div>
-      <section className="my-[70px]">
+      <section className="my-12 lg:my-[70px] ">
         <div className="container">
-          <div className="font-semibold text-[60px] leading-{180%] text-[#000000] text-center">
-            <h1>Trusted Software Development Company</h1>
+          <div className="font-medium lg:font-semibold text-[40] lg:text-[60px] leading-{180%] text-[#000000] text-center">
+            <h1 className="w-auto">Trusted Software Development Company</h1>
           </div>
-          <div className="bg-[#F9EFE2] flex gap-[94px] pl-[84px] pt-[74px] pr-[74px] pb-[103px]">
+          <div className="bg-[#F9EFE2] lg:mt-[54px] lg:flex lg:gap-[94px] lg:pl-[84px] lg:pt-[74px] lg:pr-[74px] lg:pb-[103px]  md:flex md:gap-[40px] lg:pl-[44px] lg:pt-[34px] lg:pr-[34px] lg:pb-[83px] py-[20px] px-[20px]">
             <div className="">
-              <h4 className="bg-[#FFB000] font-semibold text-[36px] leading-{180%] text-[#FFFFFF] text-center pt-[288px] pb-[258px] pl-[61px] pr-[160px] text-nowrap">
+              <h4 className="bg-[#FFB000] lg:font-semibold font-normal text-[30px] lg:text-[36px] leading-{180%] text-[#FFFFFF] text-center lg:pt-[288px] lg:pb-[258px] lg:pl-[61px] lg:pr-[160px] pl-[30px] pr-[100px] pt-[100px] pb-[100px]  text-nowrap">
                 Send Us a Message
               </h4>
             </div>

@@ -26,6 +26,12 @@
   }
 
  }
+/* slider */
+ .slick-center{
+  transform: scale(1.2) !important; 
+  opacity: 1 !important;  
+}
+
 
  .slick-prev:before,
 .slick-next:before {
@@ -36,35 +42,17 @@
     left: -35px !important;
 }
 .slick-next {
-    right: -35px !important;
+    right: -30px !important;
 }
 
 .slick-slide {
   padding: 0 20px !important;
+  
 }
-.slick-center{
-  transform: scale(1.1) !important; /* মাঝের স্লাইড বড় করে */
-  opacity: 1;
+.slide .slick-track{
+  height: 728px;
+  margin-top: 109px;
 }
+/* slider */
+/* -------------------------------------------------------------------------- */
 
-.active {
-  color: #FFB000;
-}
-
-@media screen and (min-width: 480px) {
- .slider{
-  display: flex !important;
-  flex-direction: column !important;
-}
-.slick-prev {
-    left: -10px !important;
-}
-.slick-next {
-    right: -10px !important;
-}
-.slick-prev:before,
-.slick-next:before {
-  color: #FFB000 !important;
-  font-size: 20px !important ;       
-}
-}
