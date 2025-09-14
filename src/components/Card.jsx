@@ -22,6 +22,7 @@ export default function Card() {
     autoplaySpeed: 3000,
     pauseOnHover: true,
     arrows: false,
+    centerPadding: "15px",
     responsive: [
       {
         breakpoint: 1024,
@@ -31,17 +32,19 @@ export default function Card() {
         breakpoint: 768,
         settings: { slidesToShow: 1 },
       },
+      {
+        breakpoint: 480,
+        settings: { slidesToShow: 1 },
+      },
     ],
   };
 
-  // প্রতিটি কার্ডের জন্য আলাদা আলাদা স্টেট
   const [viewdetails1, setViewdetails1] = useState(false);
   const [viewdetails2, setViewdetails2] = useState(false);
   const [viewdetails3, setViewdetails3] = useState(false);
   const [viewdetails4, setViewdetails4] = useState(false);
 
-  // প্রতিটি কার্ডের জন্য আলাদা টগল ফাংশন
-  const handleReadToggle1 = () => {
+    const handleReadToggle1 = () => {
     setViewdetails1(!viewdetails1);
   };
   const handleReadToggle2 = () => {

@@ -10,49 +10,28 @@
   }
 
   .list {
-    @apply text-[#27265B] relative lg:font-medium lg:text-[18px] text-[16px] hover:text-[#FFB000]  lg:after:content-[''] lg:after:absolute lg:after:bottom-[-5px] lg:after:left-0 lg:after:bg-[#FFB000] lg:after:w-0 lg:hover:after:w-full lg:after:h-1 lg:after:transition-all;
+    @apply text-[#27265B] relative lg:font-medium lg:text-[18px] text-[16px] hover:text-[#FFB000] lg:after:content-[''] lg:after:absolute lg:after:bottom-[-5px] lg:after:left-0 lg:after:bg-[#FFB000] lg:after:w-0 lg:hover:after:w-full lg:after:h-1 lg:after:transition-all;
   }
 
-  .offer{
+  .offer {
     @apply font-semibold relative text-[48px] text-[#012645] leading-[168%] mb-[76px] after:content-[''] after:absolute after:bottom-[-5px] after:left-[50%] after:bg-[#FFB000] after:w-0 hover:after:w-[58px] after:h-[5px] after:transform after:translate-x-[-50%] after:translate-y-[-50%]
   }
 
-.deptbutton{
-  @apply font-medium text-[18px] text-[#000000] leading-[168%] py-[15px] px-[30px] hover:bg-[#FFB000] hover:text-white rounded-[4px]
-}
-
- .weblist {
-    @apply relative py-[18px] px-[24px] bg-white text-[#012645] font-semibold text-[18px] hover:bg-[#FFB000] hover:text-white transition-all duration-300 after:content-[''] after:absolute after:bottom-[-29px] after:left-0 after:bg-[#FFB000] after:w-0 after:h-1 hover:after:w-full
+  .deptbutton {
+    @apply font-medium text-[14px] lg:text-[18px] text-[#000000] leading-[168%] py-[10px] px-[20px] lg:py-[15px] lg:px-[30px] rounded-[4px]
   }
 
- }
+
+  .weblist {
+    @apply relative py-[16px] px-[20px] font-semibold text-[16px] md:py-[18px] md:px-[24px] md:font-semibold md:text-[18px] lg:py-[18px] lg:px-[24px] bg-white text-[#012645] lg:font-semibold lg:text-[18px] lg:hover:bg-[#FFB000] lg:hover:text-white lg:transition-all lg:duration-300 lg:after:content-[''] lg:after:absolute lg:after:bottom-[-29px] lg:after:left-0 lg:after:bg-[#FFB000] lg:after:w-0 lg:after:h-1 hover:after:w-full
+  }
+
+}
+
 /* slider */
- .slick-center{
-  transform: scale(1.2) !important; 
-  opacity: 1 !important;  
-}
-
-
- .slick-prev:before,
-.slick-next:before {
-  color: #FFB000 !important;
-  font-size: 30px !important ;       
-}
-.slick-prev {
-    left: -35px !important;
-}
-.slick-next {
-    right: -30px !important;
-}
-
 .slick-slide {
   padding: 0 20px !important;
-  
 }
-.slide .slick-track{
-  height: 728px;
-  margin-top: 109px;
-}
+
 /* slider */
 /* -------------------------------------------------------------------------- */
-

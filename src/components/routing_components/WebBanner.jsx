@@ -3,12 +3,12 @@ import webannerimage from "../../assets/images/webbannerimage.png";
 const WebBanner = () => {
   return (
     <div>
-        <section className="bg-[#F3FFF7]">
+        <section className="bg-[#F3FFF7] lg:mb-[177px] mb-16  md:mb-[112px]">
                 <div className="container">
-                  <div className="grid grid-cols-2 items-center gap-6 pt-[114px]">
-                    <div>
-                      <h1 className="font-medium text-[#000000] text-[72px]">Web</h1>
-                      <span className="font-bold text-[72px]  text-[#FFB000]">
+                  <div className="lg:grid lg:grid-cols-2 items-center grid grid-cols-1 gap-4 lg:gap-6 pt-[100px] lg:pt-[114px]">
+                    <div className='flex md:flex-col lg:flex-col gap-2 items-center lg:items-start'>
+                      <h1 className="font-medium text-[#000000] text-[36px] lg:text-[72px] md:text-[56px] w-auto">Web</h1>
+                      <span className="lg:font-bold font-semibold text-[36px] lg:text-[72px] md:text-[56px] text-[#FFB000] w-auto">
                         Development 
                       </span>
                     </div>

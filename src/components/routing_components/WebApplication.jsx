@@ -8,7 +8,7 @@ const WebApplication = () => {
       <section className="bg-[#EFF2FF] py-10">
         <div className="container">
           <div>
-            <ul className="flex gap-1 ">
+            <ul className="lg:flex lg:gap-1 grid grid-cols-2 gap-1">
               <li className="weblist border-1 border-[#CBD3FF]">
                 <a href="#">Enterprise Applications</a>
               </li>
