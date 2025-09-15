@@ -25,14 +25,16 @@ const WebApplication = () => {
           </div>
         </div>
       </section>
-      <section>
-        <div className="container">
-          <div className="flex justify-between items-center">
-            <div>
-              <h2 className="text-[40px] font-bold text-[#012645] mt-[82px] mb-16">
+      <section className="px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-10">
+            {/* Left Content */}
+            <div className="flex-1">
+              <h2 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#012645] mt-10 lg:mt-[82px] mb-6 lg:mb-16">
                 Enterprise Applications
               </h2>
-              <p className="text-[18px] font-regular text-[#012645] mb-4 w-[706px]">
+
+              <p className="text-[16px] sm:text-[18px] font-regular text-[#012645] mb-4 max-w-[706px] w-full">
                 We got our start offering unique opportunities for software
                 companies to serve their clients in Florida and Georgia and now
                 we're expanding that approach nationwide, shaping software to
@@ -40,25 +42,27 @@ const WebApplication = () => {
                 only constants across our projects being responsive, reliable,
                 and scalable frameworks.
               </p>
-              <p className="text-[18px] font-regular text-[#012645] mb-4 w-[706px]">
+
+              <p className="text-[16px] sm:text-[18px] font-regular text-[#012645] mb-4 max-w-[706px] w-full">
                 Our software engineers bring over a decade of experience in
                 creating dynamic, innovative ERP (Enterprise Resource Planning)
                 applications. Processes as complicated as inventory and
                 accounting are made simple with our optimized approach to
                 critical business procedures.
               </p>
-              <ul className="space-y-4 text-gray-700 text-lg">
+
+              <ul className="space-y-4 text-gray-700 text-[16px] sm:text-lg">
                 <li className="flex items-start">
-                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-10 flex-shrink-0"></span>
-                  <p className="w-[644px]">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-4 sm:mr-6 flex-shrink-0"></span>
+                  <p className="max-w-[644px] w-full">
                     From customer databases to inventory tracking software – you
                     need software that's well-designed, secure, and striking in
                     an increasingly competitive market.
                   </p>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-10 flex-shrink-0"></span>
-                  <p className="w-[644px]">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-4 sm:mr-6 flex-shrink-0"></span>
+                  <p className="max-w-[644px] w-full">
                     We believe in the fundamentals, such as troubleshooting and
                     optimization, in order to create software that lasts.
                     Regardless of the size of your organization, we keep an
@@ -66,10 +70,21 @@ const WebApplication = () => {
                   </p>
                 </li>
               </ul>
-              <img className="mt-4" src={webimage} alt="webimage" />
+
+              <img
+                
+                src={webimage}
+                alt="webimage"
+              />
             </div>
-            <div className="flex justify-end ">
-              <img className=" self-end" src={webentimage} alt="webentimage" />
+
+            {/* Right Image */}
+            <div className="flex-1 flex justify-center lg:justify-end">
+              <img
+               
+                src={webentimage}
+                alt="webentimage"
+              />
             </div>
           </div>
         </div>

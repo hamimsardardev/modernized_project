@@ -36,6 +36,10 @@ export default function Card() {
         breakpoint: 480,
         settings: { slidesToShow: 1 },
       },
+      {
+        breakpoint: 320,
+        settings: { slidesToShow: 1 },
+      },
     ],
   };
 
@@ -74,7 +78,7 @@ export default function Card() {
               sm:ml-0 sm:pt-[16px] sm:pb-[24px] sm:pr-[20px] sm:pl-[16px]
               md:pt-[24px] md:pb-[35px] md:pr-[29px] md:pl-[25px]"
             >
-              <div className="rounded-full border-[3px] border-[#7F5800] flex items-center justify-center lg:w-24 lg:h-24 w-15 h-15">
+              <div className="rounded-full border-[3px] border-[#7F5800] flex items-center justify-center lg:w-28 lg:h-28 w-16 h-16">
                 <img
                   src={offerimage1}
                   alt="offerimage1"
@@ -84,22 +88,22 @@ export default function Card() {
               <h2 className="font-bold lg:text-[20px] text-[18px] text-[#000000] leading-[180%] lg:mt-[12px] mt-[8px] pb-3 hover:text-[#012645]">
                 App Development
               </h2>
-              <p className="w-auto lg:font-medium font-normal lg:text-[18px] text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645]">
+              <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] lg:pb-5 group-hover:text-[#012645]">
                 We develop complex, high-quality iOS, Android, and Windows apps
                 - and we can work in almost any niche. When designing apps, we
                 aim for memorability and stability, crafting a foundation for
                 you to build your empire around. With MoMo you can expect modern
-                UX and UI for your consumers across all commercial platforms and
+                UX and UI for your consumers across all commercial plat and
                 browsers.
               </p>
               <button
                 onClick={handleReadToggle1}
-                className="lg:font-semibold font-normal lg:text-[18px] text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645] cursor-pointer hover:text-red-500"
+                className="lg:font-semibold font-normal lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645] cursor-pointer hover:text-red-500"
               >
                 {!viewdetails1 && "View Details"}
               </button>
               {viewdetails1 && (
-                <p className="w-auto font-medium lg:text-[18px] text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645] ">
+                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645] ">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Fugit, accusamus? Nihil alias ab distinctio tempora qui sint
                   ea minima quibusdam!
@@ -128,7 +132,7 @@ export default function Card() {
                 <h2 className="font-bold lg:text-[20px] text-[18px] text-[#000000] leading-[180%] lg:mt-[12px] mt-[8px] pb-3 hover:text-[#012645]">
                   Digital Marketing
                 </h2>
-                <p className="w-auto lg:font-medium font-normal lg:text-[18px] text-[16px] text-[#FFFFFF] leading-[168%] pb-5 group-hover:text-[#012645]">
+                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] lg:pb-5 group-hover:text-[#012645]">
                   Having trouble spreading the word about your product? Let us
                   formulate a strategy to reach your audience through a mixture
                   of SEO, ads, and a solid content strategy. We’ll perform
@@ -143,7 +147,7 @@ export default function Card() {
                   {!viewdetails2 && "View Details"}
                 </button>
                 {viewdetails2 && (
-                  <p className="w-auto font-medium lg:text-[18px] text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645]">
+                  <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645]">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Fugit, accusamus? Nihil alias ab distinctio tempora qui sint
                     ea minima quibusdam!
@@ -173,7 +177,7 @@ export default function Card() {
                 <h2 className="font-bold lg:text-[20px] text-[18px] text-[#000000] leading-[180%] lg:mt-[12px] mt-[8px] pb-3 hover:text-[#012645]">
                   Web Planning & Development
                 </h2>
-                <p className="w-auto lg:font-medium font-normal lg:text-[18px] text-[16px] text-[#FFFFFF] leading-[168%] pb-5 group-hover:text-[#012645]">
+                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] lg:pb-5 group-hover:text-[#012645]">
                   Looking to establish or improve your business’s online
                   presence? Let us craft a website that compliments and
                   propagates your business – designing a website that fits your
@@ -188,7 +192,7 @@ export default function Card() {
                   {!viewdetails3 && "View Details"}
                 </button>
                 {viewdetails3 && (
-                  <p className="w-auto font-medium lg:text-[18px] text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645]">
+                  <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645]">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Fugit, accusamus? Nihil alias ab distinctio tempora qui sint
                     ea minima quibusdam!
@@ -209,12 +213,12 @@ export default function Card() {
               sm:pl-[16px] md:pt-[24px] md:pb-[35px] md:pr-[29px] md:pl-[25px]"
               >
                 <div className="rounded-full border-[3px] border-[#7F5800] flex items-center justify-center lg:w-28 lg:h-28 w-16 h-16">
-                  <LuBriefcaseBusiness className="lg:h-[51px] lg:w-[51px] h-10 w-10 lg:w-15 lg:h-15" />
+                  <LuBriefcaseBusiness className="md:h-[51px] md:w-[51px] h-10 w-10 lg:w-15 lg:h-15" />
                 </div>
                 <h2 className="font-bold lg:text-[20px] text-[18px] text-[#000000] leading-[180%] lg:mt-[12px] mt-[8px] pb-3 hover:text-[#012645]">
                   Business Solutions
                 </h2>
-                <p className="w-auto lg:font-medium font-normal lg:text-[18px] text-[16px] text-[#FFFFFF] leading-[168%] pb-5 group-hover:text-[#012645]">
+                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] lg:pb-5 group-hover:text-[#012645]">
                   Looking to establish or improve your business’s online
                   presence? Let us craft a website that compliments and
                   propagates your business – designing a website that fits your
@@ -229,7 +233,7 @@ export default function Card() {
                   {!viewdetails4 && "View Details"}
                 </button>
                 {viewdetails4 && (
-                  <p className="w-auto font-medium lg:text-[18px] text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645]">
+                  <p className="w-auto font-thin md:font-medium lg:text-[18px] text-[14px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645]">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Fugit, accusamus? Nihil alias ab distinctio tempora qui sint
                     ea minima quibusdam!
