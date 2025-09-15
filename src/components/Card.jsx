@@ -40,6 +40,10 @@ export default function Card() {
         breakpoint: 320,
         settings: { slidesToShow: 1 },
       },
+      {
+        breakpoint: 300,
+        settings: { slidesToShow: 1 },
+      },
     ],
   };
 
