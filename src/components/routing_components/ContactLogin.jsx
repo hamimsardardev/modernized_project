@@ -8,7 +8,7 @@ const ContactLogin = () => {
           <div className="font-medium lg:font-semibold text-[40] lg:text-[60px] leading-{180%] text-[#000000] text-center">
             <h1 className="w-auto">Trusted Software Development Company</h1>
           </div>
-          <div className="bg-[#F9EFE2] lg:mt-[54px] lg:flex lg:gap-[94px] lg:pl-[84px] lg:pt-[74px] lg:pr-[74px] lg:pb-[103px]  md:flex md:gap-[40px] lg:pl-[44px] lg:pt-[34px] lg:pr-[34px] lg:pb-[83px] py-[20px] px-[20px]">
+          <div className="bg-[#F9EFE2] lg:mt-[54px] lg:flex lg:gap-[94px]  lg:pt-[74px] lg:pr-[74px]   md:flex md:flex-col md:gap-[40px] lg:pl-[44px]   lg:pb-[83px] py-[20px] px-[20px]">
             <div className="">
               <h4 className="bg-[#FFB000] lg:font-semibold font-normal text-[30px] lg:text-[36px] leading-{180%] text-[#FFFFFF] text-center lg:pt-[288px] lg:pb-[258px] lg:pl-[61px] lg:pr-[160px] pl-[30px] pr-[100px] pt-[100px] pb-[100px]  text-nowrap">
                 Send Us a Message

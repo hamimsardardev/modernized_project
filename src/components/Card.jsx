@@ -30,7 +30,7 @@ export default function Card() {
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1 },
+        settings: { slidesToShow: 2 },
       },
       {
         breakpoint: 480,
@@ -38,10 +38,6 @@ export default function Card() {
       },
       {
         breakpoint: 320,
-        settings: { slidesToShow: 1 },
-      },
-      {
-        breakpoint: 300,
         settings: { slidesToShow: 1 },
       },
     ],
@@ -52,7 +48,7 @@ export default function Card() {
   const [viewdetails3, setViewdetails3] = useState(false);
   const [viewdetails4, setViewdetails4] = useState(false);
 
-    const handleReadToggle1 = () => {
+  const handleReadToggle1 = () => {
     setViewdetails1(!viewdetails1);
   };
   const handleReadToggle2 = () => {
@@ -69,56 +65,58 @@ export default function Card() {
     <section className='bg-[url("/images/reviewbg.png")] bg-cover bg-center bg-no-repeat w-full py-15'>
       <div className="container mx-auto px-5">
         <div className="text-center">
-          <h1 className="font-semibold relative text-[48px] text-[#012645] leading-[168%] mb-[76px] after:content-[''] after:absolute after:bottom-[-5px] after:left-[50%] after: after:bg-[#FFB000] after:w-0 hover:after:w-[58px] after:h-[5px] after:transform after:translate-x-[-50%] after:translate-y-[-50%]">
+          <h1 className="font-semibold relative text-[32px] md:text-3xl lg:text-[48px]  text-[#012645] leading-[168%] mb-6 md:mb-[50px] lg:mb-[76px] after:content-[''] after:absolute after:bottom-[-5px] after:left-[50%] after: after:bg-[#FFB000] after:w-0 hover:after:w-[58px] after:h-[5px] after:transform after:translate-x-[-50%] after:translate-y-[-50%]">
             What We Offer
           </h1>
         </div>
 
-        <div className="mt-20">
+        <div className="mt-2 lg:mt-20 md:mt-4">
           <Slider ref={sliderRef} {...settings}>
-            <div
-              className="group ml-3 bg-[#FFB000] border border-gray-300 rounded-[14px] shadow-xl pt-[24px]
+            <div>
+              <div
+                className="group ml-3 bg-[#FFB000] border border-gray-300 rounded-[14px] shadow-xl pt-[24px]
               pb-[35px] pr-[29px] pl-[25px] hover:bg-[#FFFFFF]
               sm:ml-0 sm:pt-[16px] sm:pb-[24px] sm:pr-[20px] sm:pl-[16px]
               md:pt-[24px] md:pb-[35px] md:pr-[29px] md:pl-[25px]"
-            >
-              <div className="rounded-full border-[3px] border-[#7F5800] flex items-center justify-center lg:w-28 lg:h-28 w-16 h-16">
-                <img
-                  src={offerimage1}
-                  alt="offerimage1"
-                  className="w-8 h-8 lg:w-15 lg:h-15"
-                />
-              </div>
-              <h2 className="font-bold lg:text-[20px] text-[18px] text-[#000000] leading-[180%] lg:mt-[12px] mt-[8px] pb-3 hover:text-[#012645]">
-                App Development
-              </h2>
-              <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] lg:pb-5 group-hover:text-[#012645]">
-                We develop complex, high-quality iOS, Android, and Windows apps
-                - and we can work in almost any niche. When designing apps, we
-                aim for memorability and stability, crafting a foundation for
-                you to build your empire around. With MoMo you can expect modern
-                UX and UI for your consumers across all commercial plat and
-                browsers.
-              </p>
-              <button
-                onClick={handleReadToggle1}
-                className="lg:font-semibold font-normal lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645] cursor-pointer hover:text-red-500"
               >
-                {!viewdetails1 && "View Details"}
-              </button>
-              {viewdetails1 && (
-                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645] ">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Fugit, accusamus? Nihil alias ab distinctio tempora qui sint
-                  ea minima quibusdam!
+                <div className="rounded-full border-[3px] border-[#7F5800] flex items-center justify-center w-12 h-12 md:w-20 md:h-20 lg:w-28 lg:h-28 ">
+                  <img
+                    src={offerimage1}
+                    alt="offerimage1"
+                    className="w-8 h-8 lg:w-15 lg:h-15"
+                  />
+                </div>
+                <h2 className="font-bold lg:text-[20px] text-[18px] text-[#000000] leading-[180%] lg:mt-[12px] mt-[8px] pb-3 hover:text-[#012645]">
+                  App Development
+                </h2>
+                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] lg:pb-5 group-hover:text-[#012645]">
+                  We develop complex, high-quality iOS, Android, and Windows
+                  apps - and we can work in almost any niche. When designing
+                  apps, we aim for memorability and stability, crafting a
+                  foundation for you to build your empire around. With MoMo you
+                  can expect modern UX and UI for your consumers across all
+                  commercial plat and browsers.
                 </p>
-              )}
-              <button
-                onClick={handleReadToggle1}
-                className="lg:font-semibold font-normal lg:text-[18px] text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645] cursor-pointer hover:text-red-500"
-              >
-                {viewdetails1 && "View Less"}
-              </button>
+                <button
+                  onClick={handleReadToggle1}
+                  className="lg:font-semibold font-normal lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645] cursor-pointer hover:text-red-500"
+                >
+                  {!viewdetails1 && "View Details"}
+                </button>
+                {viewdetails1 && (
+                  <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] group-hover:text-[#012645] ">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Fugit, accusamus? Nihil alias ab distinctio tempora qui sint
+                    ea minima quibusdam!
+                  </p>
+                )}
+                <button
+                  onClick={handleReadToggle1}
+                  className="lg:font-semibold font-normal lg:text-[18px] text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645] cursor-pointer hover:text-red-500"
+                >
+                  {viewdetails1 && "View Less"}
+                </button>
+              </div>
             </div>
             <div>
               <div
@@ -136,7 +134,7 @@ export default function Card() {
                 <h2 className="font-bold lg:text-[20px] text-[18px] text-[#000000] leading-[180%] lg:mt-[12px] mt-[8px] pb-3 hover:text-[#012645]">
                   Digital Marketing
                 </h2>
-                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] lg:pb-5 group-hover:text-[#012645]">
+                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] lg:pb-5 group-hover:text-[#012645]">
                   Having trouble spreading the word about your product? Let us
                   formulate a strategy to reach your audience through a mixture
                   of SEO, ads, and a solid content strategy. We’ll perform
@@ -151,7 +149,7 @@ export default function Card() {
                   {!viewdetails2 && "View Details"}
                 </button>
                 {viewdetails2 && (
-                  <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645]">
+                  <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] group-hover:text-[#012645]">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Fugit, accusamus? Nihil alias ab distinctio tempora qui sint
                     ea minima quibusdam!
@@ -181,7 +179,7 @@ export default function Card() {
                 <h2 className="font-bold lg:text-[20px] text-[18px] text-[#000000] leading-[180%] lg:mt-[12px] mt-[8px] pb-3 hover:text-[#012645]">
                   Web Planning & Development
                 </h2>
-                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] lg:pb-5 group-hover:text-[#012645]">
+                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] lg:pb-5 group-hover:text-[#012645]">
                   Looking to establish or improve your business’s online
                   presence? Let us craft a website that compliments and
                   propagates your business – designing a website that fits your
@@ -196,7 +194,7 @@ export default function Card() {
                   {!viewdetails3 && "View Details"}
                 </button>
                 {viewdetails3 && (
-                  <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645]">
+                  <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] group-hover:text-[#012645]">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Fugit, accusamus? Nihil alias ab distinctio tempora qui sint
                     ea minima quibusdam!
@@ -222,7 +220,7 @@ export default function Card() {
                 <h2 className="font-bold lg:text-[20px] text-[18px] text-[#000000] leading-[180%] lg:mt-[12px] mt-[8px] pb-3 hover:text-[#012645]">
                   Business Solutions
                 </h2>
-                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] leading-[168%] lg:pb-5 group-hover:text-[#012645]">
+                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] lg:pb-5 group-hover:text-[#012645]">
                   Looking to establish or improve your business’s online
                   presence? Let us craft a website that compliments and
                   propagates your business – designing a website that fits your
@@ -237,7 +235,7 @@ export default function Card() {
                   {!viewdetails4 && "View Details"}
                 </button>
                 {viewdetails4 && (
-                  <p className="w-auto font-thin md:font-medium lg:text-[18px] text-[14px] text-[#FFFFFF] leading-[168%] group-hover:text-[#012645]">
+                  <p className="w-auto font-thin md:font-medium lg:text-[18px] text-[14px] text-[#FFFFFF] lg:leading-[168%] group-hover:text-[#012645]">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Fugit, accusamus? Nihil alias ab distinctio tempora qui sint
                     ea minima quibusdam!

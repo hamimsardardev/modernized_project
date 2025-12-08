@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"; // useEffect import করো
+import React, { useState, useEffect } from "react";
 import HeaderLogo from "../assets/images/logo.png";
 import { Link, useLocation } from "react-router-dom";
 import { AiOutlineCloseCircle } from "react-icons/ai";
@@ -30,15 +30,17 @@ const Header = () => {
               {navbarshow ? (
                 <AiOutlineCloseCircle
                   onClick={handleshownavbar}
-                  className="text-black lg:hidden h-[30px] w-[30px]"
+                  className="text-black lg:hidden md:hidden h-[30px] w-[30px]"
                 />
               ) : (
                 <FaBarsProgress
                   onClick={handleshownavbar}
-                  className="text-black lg:hidden h-[30px] w-[30px]"
+                  className="text-black lg:hidden md:hidden h-[30px] w-[30px]"
                 />
               )}
-              <ul className="hidden lg:flex flex-col md:flex-row gap-4 md:gap-[44px] p-4 md:p-0">
+              <ul
+                className="hidden  md:flex lg:flex gap-4 md:gap-2 p-0 md:p-2"
+              >
                 <li className={pathname === "/" ? "list active" : "list"}>
                   <Link to="/">Home</Link>
                 </li>
@@ -122,7 +124,7 @@ const Header = () => {
               )}
 
               <div className="hidden md:block">
-                <button className="bg-[#FFB000] border-2 border-transparent text-white py-[10px] px-[20px] md:py-[13px] md:px-[40px] rounded-[6px] text-[16px] md:text-[18px] font-medium cursor-pointer hover:border-2 hover:border-[#FFB000] hover:bg-white hover:text-black hover:transition-all">
+                <button className="bg-[#FFB000] border-2 border-transparent text-white py-[10px] px-[20px] md:py-[8px] md:px-[20px] rounded-[6px] text-[14px] md:text-[16px] font-medium cursor-pointer hover:border-2 hover:border-[#FFB000] hover:bg-white hover:text-black hover:transition-all">
                   Got an Idea
                 </button>
               </div>
