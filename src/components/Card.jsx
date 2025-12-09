@@ -22,23 +22,31 @@ export default function Card() {
     autoplaySpeed: 3000,
     pauseOnHover: true,
     arrows: false,
-    centerPadding: "15px",
+    centerPadding: "0",
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: 2 },
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
       },
       {
-        breakpoint: 768,
-        settings: { slidesToShow: 2 },
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
-        settings: { slidesToShow: 1 },
-      },
-      {
-        breakpoint: 320,
-        settings: { slidesToShow: 1 },
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
       },
     ],
   };
@@ -70,13 +78,12 @@ export default function Card() {
           </h1>
         </div>
 
-        <div className="mt-2 lg:mt-20 md:mt-4">
+        <div className="slider-container">
           <Slider ref={sliderRef} {...settings}>
             <div>
               <div
-                className="group ml-3 bg-[#FFB000] border border-gray-300 rounded-[14px] shadow-xl pt-[24px]
-              pb-[35px] pr-[29px] pl-[25px] hover:bg-[#FFFFFF]
-              sm:ml-0 sm:pt-[16px] sm:pb-[24px] sm:pr-[20px] sm:pl-[16px]
+                className="group ml-3 bg-[#FFB000] border border-gray-300 rounded-[14px] shadow-xl pt-[24px] pb-[35px] pr-[29px] pl-[25px] hover:bg-[#FFFFFF]
+              sm:ml-0 sm:pt-[16px] sm:pb-[24px] sm:pr-[20px] 
               md:pt-[24px] md:pb-[35px] md:pr-[29px] md:pl-[25px]"
               >
                 <div className="rounded-full border-[3px] border-[#7F5800] flex items-center justify-center w-12 h-12 md:w-20 md:h-20 lg:w-28 lg:h-28 ">
@@ -93,9 +100,7 @@ export default function Card() {
                   We develop complex, high-quality iOS, Android, and Windows
                   apps - and we can work in almost any niche. When designing
                   apps, we aim for memorability and stability, crafting a
-                  foundation for you to build your empire around. With MoMo you
-                  can expect modern UX and UI for your consumers across all
-                  commercial plat and browsers.
+                  foundation for you to build your empire around.
                 </p>
                 <button
                   onClick={handleReadToggle1}
@@ -138,9 +143,7 @@ export default function Card() {
                   Having trouble spreading the word about your product? Let us
                   formulate a strategy to reach your audience through a mixture
                   of SEO, ads, and a solid content strategy. We’ll perform
-                  audience and competitive research, making it simple for you to
-                  connect with as many of your prospective customers as
-                  possible.
+                  audience and competitive research..
                 </p>
                 <button
                   onClick={handleReadToggle2}
@@ -183,9 +186,7 @@ export default function Card() {
                   Looking to establish or improve your business’s online
                   presence? Let us craft a website that compliments and
                   propagates your business – designing a website that fits your
-                  niche and your tone while standing out from your competitors
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptas, maxime..
+                  niche and your tone while standing out from your competitors.
                 </p>
                 <button
                   onClick={handleReadToggle3}
@@ -224,9 +225,7 @@ export default function Card() {
                   Looking to establish or improve your business’s online
                   presence? Let us craft a website that compliments and
                   propagates your business – designing a website that fits your
-                  niche and your tone while standing out from your competitors
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptas, maxime..
+                  niche and your tone while standing out from your competitors.
                 </p>
                 <button
                   onClick={handleReadToggle4}

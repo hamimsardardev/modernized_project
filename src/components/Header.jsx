@@ -39,7 +39,7 @@ const Header = () => {
                 />
               )}
               <ul
-                className="hidden  md:flex lg:flex gap-4 md:gap-2 p-0 md:p-2"
+                className="hidden md:flex lg:flex lg:gap-6 gap-4 md:gap-2 p-0 md:p-2"
               >
                 <li className={pathname === "/" ? "list active" : "list"}>
                   <Link to="/">Home</Link>
