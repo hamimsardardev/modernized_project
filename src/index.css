@@ -28,10 +28,8 @@
 
 }
 
-/* slider */
-.slick-slide {
-  padding: 0 20px !important;
+.active {
+  color: red;
 }
 
-/* slider */
 /* -------------------------------------------------------------------------- */

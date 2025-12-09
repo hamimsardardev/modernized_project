@@ -1,56 +1,19 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import offerimage1 from "../assets/images/offerimage1.png";
 import offerimage2 from "../assets/images/offerimage2.png";
 import offerimage3 from "../assets/images/offerimage3.png";
+import { MdOutlineNavigateNext } from "react-icons/md";
+import { GrFormPrevious } from "react-icons/gr";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
 import { LuBriefcaseBusiness } from "react-icons/lu";
 
 export default function Card() {
-  const sliderRef = useRef(null);
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-    arrows: false,
-    centerPadding: "0",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   const [viewdetails1, setViewdetails1] = useState(false);
   const [viewdetails2, setViewdetails2] = useState(false);
   const [viewdetails3, setViewdetails3] = useState(false);
@@ -77,15 +40,26 @@ export default function Card() {
             What We Offer
           </h1>
         </div>
-
-        <div className="slider-container">
-          <Slider ref={sliderRef} {...settings}>
-            <div>
-              <div
-                className="group ml-3 bg-[#FFB000] border border-gray-300 rounded-[14px] shadow-xl pt-[24px] pb-[35px] pr-[29px] pl-[25px] hover:bg-[#FFFFFF]
-              sm:ml-0 sm:pt-[16px] sm:pb-[24px] sm:pr-[20px] 
-              md:pt-[24px] md:pb-[35px] md:pr-[29px] md:pl-[25px]"
-              >
+        <div className="relative">
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={20}
+            slidesPerView={3}
+            slidesPerGroup={1}
+            loop={true}
+            navigation={{
+              nextEl: ".custom-next",
+              prevEl: ".custom-prev",
+            }}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 3 },
+            }}
+          >
+            <SwiperSlide>
+              <div className="group ml-3 pl-2 md:pl-3 lg:pl-5 py-2 md:py-3 lg:py-5 bg-[#FFB000] border border-gray-300 rounded-[14px] shadow-xl w-auto lg:w-[400px] hover:bg-[#FFFFFF]">
                 <div className="rounded-full border-[3px] border-[#7F5800] flex items-center justify-center w-12 h-12 md:w-20 md:h-20 lg:w-28 lg:h-28 ">
                   <img
                     src={offerimage1}
@@ -96,7 +70,7 @@ export default function Card() {
                 <h2 className="font-bold lg:text-[20px] text-[18px] text-[#000000] leading-[180%] lg:mt-[12px] mt-[8px] pb-3 hover:text-[#012645]">
                   App Development
                 </h2>
-                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] lg:pb-5 group-hover:text-[#012645]">
+                <p className="w-auto lg:w-[368px]  lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] lg:pb-5 group-hover:text-[#012645]">
                   We develop complex, high-quality iOS, Android, and Windows
                   apps - and we can work in almost any niche. When designing
                   apps, we aim for memorability and stability, crafting a
@@ -109,7 +83,7 @@ export default function Card() {
                   {!viewdetails1 && "View Details"}
                 </button>
                 {viewdetails1 && (
-                  <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] group-hover:text-[#012645] ">
+                  <p className="w-auto lg:w-[368px] lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] group-hover:text-[#012645] ">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Fugit, accusamus? Nihil alias ab distinctio tempora qui sint
                     ea minima quibusdam!
@@ -122,13 +96,9 @@ export default function Card() {
                   {viewdetails1 && "View Less"}
                 </button>
               </div>
-            </div>
-            <div>
-              <div
-                className="group ml-3 bg-[#FFB000] border border-gray-300 rounded-[14px] shadow-xl pt-[24px]
-              pb-[35px] pr-[29px] pl-[25px] hover:bg-[#FFFFFF] sm:ml-0 sm:pt-[16px] sm:pb-[24px] sm:pr-[20px] 
-              sm:pl-[16px] md:pt-[24px] md:pb-[35px] md:pr-[29px] md:pl-[25px]"
-              >
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="group ml-3 pl-2 md:pl-3 lg:pl-5 py-2 md:py-3 lg:py-5 bg-[#FFB000] border border-gray-300 rounded-[14px] shadow-xl w-auto lg:w-[400px] hover:bg-[#FFFFFF]">
                 <div className="rounded-full border-[3px] border-[#7F5800] flex items-center justify-center lg:w-28 lg:h-28 w-16 h-16">
                   <img
                     src={offerimage2}
@@ -139,7 +109,7 @@ export default function Card() {
                 <h2 className="font-bold lg:text-[20px] text-[18px] text-[#000000] leading-[180%] lg:mt-[12px] mt-[8px] pb-3 hover:text-[#012645]">
                   Digital Marketing
                 </h2>
-                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] lg:pb-5 group-hover:text-[#012645]">
+                <p className="w-auto lg:w-[368px] lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] lg:pb-5 group-hover:text-[#012645]">
                   Having trouble spreading the word about your product? Let us
                   formulate a strategy to reach your audience through a mixture
                   of SEO, ads, and a solid content strategy. We’ll perform
@@ -152,7 +122,7 @@ export default function Card() {
                   {!viewdetails2 && "View Details"}
                 </button>
                 {viewdetails2 && (
-                  <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] group-hover:text-[#012645]">
+                  <p className="w-auto lg:w-[368px] lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] group-hover:text-[#012645]">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Fugit, accusamus? Nihil alias ab distinctio tempora qui sint
                     ea minima quibusdam!
@@ -165,13 +135,9 @@ export default function Card() {
                   {viewdetails2 && "View Less"}
                 </button>
               </div>
-            </div>
-            <div>
-              <div
-                className="group ml-3 bg-[#FFB000] border border-gray-300 rounded-[14px] shadow-xl pt-[24px]
-              pb-[35px] pr-[29px] pl-[25px] hover:bg-[#FFFFFF] sm:ml-0 sm:pt-[16px] sm:pb-[24px] sm:pr-[20px] 
-              sm:pl-[16px] md:pt-[24px] md:pb-[35px] md:pr-[29px] md:pl-[25px]"
-              >
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="group ml-3 pl-2 md:pl-3 lg:pl-5 py-2 md:py-3 lg:py-5 bg-[#FFB000] border border-gray-300 rounded-[14px] shadow-xl w-auto lg:w-[400px] hover:bg-[#FFFFFF]">
                 <div className="rounded-full border-[3px] border-[#7F5800] flex items-center justify-center lg:w-28 lg:h-28 w-16 h-16">
                   <img
                     src={offerimage3}
@@ -182,7 +148,7 @@ export default function Card() {
                 <h2 className="font-bold lg:text-[20px] text-[18px] text-[#000000] leading-[180%] lg:mt-[12px] mt-[8px] pb-3 hover:text-[#012645]">
                   Web Planning & Development
                 </h2>
-                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] lg:pb-5 group-hover:text-[#012645]">
+                <p className="w-auto lg:w-[368px] lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] lg:pb-5 group-hover:text-[#012645]">
                   Looking to establish or improve your business’s online
                   presence? Let us craft a website that compliments and
                   propagates your business – designing a website that fits your
@@ -195,7 +161,7 @@ export default function Card() {
                   {!viewdetails3 && "View Details"}
                 </button>
                 {viewdetails3 && (
-                  <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] group-hover:text-[#012645]">
+                  <p className="w-auto lg:w-[368px] lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] group-hover:text-[#012645]">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Fugit, accusamus? Nihil alias ab distinctio tempora qui sint
                     ea minima quibusdam!
@@ -208,20 +174,16 @@ export default function Card() {
                   {viewdetails3 && "View Less"}
                 </button>
               </div>
-            </div>
-            <div>
-              <div
-                className="group ml-3 bg-[#FFB000] border border-gray-300 rounded-[14px] shadow-xl pt-[24px]
-              pb-[35px] pr-[29px] pl-[25px] hover:bg-[#FFFFFF] sm:ml-0 sm:pt-[16px] sm:pb-[24px] sm:pr-[20px] 
-              sm:pl-[16px] md:pt-[24px] md:pb-[35px] md:pr-[29px] md:pl-[25px]"
-              >
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="group ml-3 pl-2 md:pl-3 lg:pl-5 py-2 md:py-3 lg:py-5 bg-[#FFB000] border border-gray-300 rounded-[14px] shadow-xl w-auto lg:w-[400px] hover:bg-[#FFFFFF]">
                 <div className="rounded-full border-[3px] border-[#7F5800] flex items-center justify-center lg:w-28 lg:h-28 w-16 h-16">
                   <LuBriefcaseBusiness className="md:h-[51px] md:w-[51px] h-10 w-10 lg:w-15 lg:h-15" />
                 </div>
                 <h2 className="font-bold lg:text-[20px] text-[18px] text-[#000000] leading-[180%] lg:mt-[12px] mt-[8px] pb-3 hover:text-[#012645]">
                   Business Solutions
                 </h2>
-                <p className="w-auto lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] lg:pb-5 group-hover:text-[#012645]">
+                <p className="w-auto lg:w-[368px] lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] lg:pb-5 group-hover:text-[#012645]">
                   Looking to establish or improve your business’s online
                   presence? Let us craft a website that compliments and
                   propagates your business – designing a website that fits your
@@ -234,7 +196,7 @@ export default function Card() {
                   {!viewdetails4 && "View Details"}
                 </button>
                 {viewdetails4 && (
-                  <p className="w-auto font-thin md:font-medium lg:text-[18px] text-[14px] text-[#FFFFFF] lg:leading-[168%] group-hover:text-[#012645]">
+                  <p className="w-auto lg:w-[368px] lg:font-medium font-thin md:font-medium lg:text-[18px] text-[14px] md:text-[16px] text-[#FFFFFF] lg:leading-[168%] group-hover:text-[#012645]">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Fugit, accusamus? Nihil alias ab distinctio tempora qui sint
                     ea minima quibusdam!
@@ -247,23 +209,15 @@ export default function Card() {
                   {viewdetails4 && "View Less"}
                 </button>
               </div>
-            </div>
-          </Slider>
+            </SwiperSlide>
+          </Swiper>
+          <button className="custom-prev absolute left-[-10px] lg:left-[-10px] top-1/2 -translate-y-1/2 z-10 bg-white text-[#FFB000] px-2 py-2 rounded-full shadow-lg">
+            <GrFormPrevious className="lg:text-3xl" />
+          </button>
 
-          <div className="mt-8 flex justify-center space-x-4">
-            <button
-              onClick={() => sliderRef.current.slickPrev()}
-              className="flex items-center justify-center w-10 h-10 text-black border rounded-full text-lg"
-            >
-              <FaArrowLeftLong />
-            </button>
-            <button
-              onClick={() => sliderRef.current.slickNext()}
-              className=" flex items-center justify-center w-10 h-10 text-black border rounded-full text-lg"
-            >
-              <FaArrowRightLong />
-            </button>
-          </div>
+          <button className="custom-next absolute right-[-18px] lg:right-[20px] top-1/2 -translate-y-1/2 z-10 bg-white text-[#FFB000] px-2 py-2 rounded-full shadow-lg">
+            <MdOutlineNavigateNext className="lg:text-3xl" />
+          </button>
         </div>
       </div>
     </section>
